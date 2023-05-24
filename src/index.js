@@ -1,10 +1,13 @@
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 import { loadMore } from './loadMore.js';
 import { searchImages } from './searchImages.js';
 import { hideBtnLoadMore } from './hideBtnLoadMore.js';
 
 const form = document.getElementById('search-form');
-const gallery = document.querySelector('.gallery');
-const btnLoadMore = document.querySelector('.load-more');
+export const gallery = document.querySelector('.gallery');
+export const btnLoadMore = document.querySelector('.load-more');
+export const lightbox = new SimpleLightbox('.gallery a');
 
 form.style.backgroundColor = 'blue';
 form.style.padding = '20px';

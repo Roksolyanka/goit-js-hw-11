@@ -1,9 +1,8 @@
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
 import { createCard } from './createCard.js';
+import { gallery } from './index.js';
+import { lightbox } from './index.js';
 
 export async function addImages(images) {
-  const gallery = document.querySelector('.gallery');
   for (const image of images) {
     const imageCard = createCard(image);
     gallery.appendChild(imageCard);
@@ -16,6 +15,6 @@ export async function addImages(images) {
     top: cardHeight * 2,
     behavior: 'smooth',
   });
-  const lightbox = new SimpleLightbox('.gallery a');
+  
   lightbox.refresh();
 }
